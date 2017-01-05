@@ -15,11 +15,12 @@ class SampleWindow(QWidget):
 
     def initGUI(self):
         self.setWindowTitle("Sample Window")
-        self.setGeometry(600, 600, 700, 150)
-        self.setMinimumHeight(100)
-        self.setMinimumWidth(250)
-        self.setMaximumHeight(200)
-        self.setMaximumWidth(800)
+        # ipdb.set_trace()
+        self.setGeometry(0, 0, 300, 300)
+        self.setMinimumHeight(300)
+        self.setMinimumWidth(300)
+        self.setMaximumHeight(500)
+        self.setMaximumWidth(500)
 
         appIcon = QIcon("icon.png")
         self.setWindowIcon(appIcon)
@@ -104,10 +105,11 @@ if __name__ == '__main__':
         myApp = QApplication(sys.argv)
         myWindow = SampleWindow()
         QCoreApplication.processEvents()
-        time.sleep(3)
+        """time.sleep(3)
         myWindow.resize(300, 300)
         myWindow.setWindowTitle("Sample Window Resized")
         myWindow.repaint()
+        """
         myApp.exec_()
         sys.exit(0)
     except NameError:
